@@ -1,0 +1,122 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte padrão para leitura */
+    background-color: #0A090D; /* Cor de fundo principal */
+    color: #0A090D; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #160E26; /* Cor de fundo do header */
+    color: #F2F2F2; /* Cor do texto no header */
+    padding: 10px 0;
+    position: fixed; /* Mantém o header fixo no topo */
+    top: 0; /* Posiciona o header no topo da página */
+    width: 100%; /* Faz o header ocupar toda a largura da tela */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #F2F2F2; /* Cor dos links */
+    text-decoration: none;
+    transition: color 0.3s; /* Transição suave para a cor do link */
+}
+
+.nav-links a:hover {
+    color: #A080BF; /* Cor ao passar o mouse sobre o link */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background: #F2F2F2; /* Cor das barras do menu hamburguer */
+    margin: 3px 0;
+}
+
+main {
+    padding: 80px 20px; /* Adiciona um padding no topo para evitar que o conteúdo fique atrás do header fixo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #F2F2F2; /* Cor de fundo das seções */
+    padding: 20px; /* Adiciona padding nas seções */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    max-width: 800px; /* Largura máxima para as seções */
+    width: 100%; /* Largura total até o máximo definido */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #160E26; /* Cor de fundo do footer */
+    color: #F2F2F2; /* Cor do texto no footer */
+}
+
+h1, h2 {
+    color: #160E26; /* Cor dos títulos */
+    margin-bottom: 20px; /* Espaçamento abaixo dos títulos */
+}
+
+p {
+    color: #0A090D; /* Cor do texto dos parágrafos */
+    margin: 15px 0; /* Espaçamento entre parágrafos */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+.capa {
+    width: 100%; /* Largura total */
+    max-width: 800px; /* Largura máxima para simular uma capa de livro */
+    margin: 20px auto; /* Centraliza a capa */
+    overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse os limites */
+    border: 5px solid #A080BF; /* Borda ao redor da capa */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+}
+
+.capa img {
+    width: 100%; /* Faz a imagem ocupar toda a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+}
